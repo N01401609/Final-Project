@@ -180,7 +180,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
-    <Content Include="Wireframes\Wireframes-Andrea.pdf" />
+    <Content Include="Content\Wireframes\Wireframes-Andrea.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
