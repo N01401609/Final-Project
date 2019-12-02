@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.Master.cs" Inherits="FinalProject.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+    
+<head runat="server">
+    <title> Creative Pages</title>
+    <link rel="stylesheet" type="text/css" href="/Content/style.css" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <header class="c-width">
+        <div id="header_nav">
+                <asp:Menu runat="server"></asp:Menu>
+
+        </div>
+
+    </header>
+    <div class="c-width">
+       
+            <asp:ContentPlaceHolder ID="Body" runat="server">
+            </asp:ContentPlaceHolder>
+
+             
+
+    </div>
+    <footer class="c-width">
+
+
+    </footer>
+</form>   
+</body>
+</html>
+

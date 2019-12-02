@@ -1,0 +1,57 @@
+﻿body {
+    text-align:center;
+}
+/* Style for the table*/
+.listitem {
+    background: #fefefe;
+    padding: 12px 5%;
+    width: 50%;
+    overflow: hidden;
+    border: 1px black solid; 
+    margin-right:20%;
+    margin-left:20%
+}
+    .listitem:after {
+        clear: both;
+    }
+    .listitem:hover {
+        background: #99d0f2;
+    }
+
+.listitem #titles {
+        background-color: goldenrod;
+        color: white;
+        font-weight: bold;
+
+}
+.colfirst, .col, .collast, h1{
+    text-align: center;
+}
+.colfirst {
+    float: left;
+    width: 37%;
+    margin-right: 1%;
+}
+.col, .collast {
+    float: left;
+    width: 20%;
+    margin-right: 1%;
+}
+
+.collast {
+    margin-right: 0%;
+}
+
+
+/* Body Styling*/
+#new_page{
+    text-align:center;
+    margin: 12px; 
+}
+.crud{
+    text-align:center;
+    right:0px; 
+}
+
+
+
