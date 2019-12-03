@@ -24,6 +24,15 @@ namespace FinalProject
         protected global::System.Web.UI.WebControls.TextBox page_title;
 
         /// <summary>
+        /// validate_title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validate_title;
+
+        /// <summary>
         /// page_content control.
         /// </summary>
         /// <remarks>
@@ -31,5 +40,14 @@ namespace FinalProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox page_content;
+
+        /// <summary>
+        /// validate_body control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator validate_body;
     }
 }

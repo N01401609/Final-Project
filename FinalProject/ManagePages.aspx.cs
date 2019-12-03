@@ -19,14 +19,7 @@ namespace FinalProject
         {
             result.InnerHtml = "";
             string query = "select * from pages";
-            //string searchkey = class_search.Text;
-            /*if (searchkey != "")
-            {
-                query += " WHERE CLASSCODE like '%" + searchkey + "%' ";
-                query += " or CLASSNAME like '%" + searchkey + "%' ";
-                query += " or concat (TEACHERFNAME, ' ', TEACHERLNAME) like '%" + searchkey + "%' ";
-            }
-            sql_debugger.InnerHtml = query;*/
+        
 
             List<Dictionary<String, String>> rs = db.List_Query(query);
             foreach (Dictionary<String, String> row in rs)

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="ManagePages.aspx.cs" Inherits="FinalProject.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Body" runat="server">
     <h1>Manage Pages</h1>
-    <div id="new_page">
+    <div id="new_page" >
         <asp:Button runat="server" Text="New Page" class ="bttn" PostBackUrl="AddPage.aspx" />
     </div>
     <div class="_table" runat="server">

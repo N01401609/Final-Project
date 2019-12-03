@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+    <div id="Page-container">
     <header class="c-width">
         <div id="header_nav" class="nav">
             <asp:Menu runat="server"></asp:Menu>
@@ -19,7 +19,7 @@
         </div>
     </header>
 
-    <div class="c-width">
+    <div class="c-width" id="main-content">
         <form id="form1" runat="server">
             <asp:ContentPlaceHolder ID="Body" runat="server">
             </asp:ContentPlaceHolder>
@@ -29,6 +29,7 @@
 
 
     </footer>
+    </div>
    
 </body>
 </html>
