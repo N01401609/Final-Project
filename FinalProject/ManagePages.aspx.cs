@@ -10,7 +10,8 @@ namespace FinalProject
     public partial class WebForm3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        { 
+
             DATABASE db = new DATABASE();
             ListofPages(db);
 
@@ -19,8 +20,8 @@ namespace FinalProject
         {
             result.InnerHtml = "";
             string query = "select * from pages";
-        
 
+        
             List<Dictionary<String, String>> rs = db.List_Query(query);
             foreach (Dictionary<String, String> row in rs)
             {
