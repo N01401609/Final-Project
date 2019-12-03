@@ -13,8 +13,8 @@
             <asp:TextBox runat="server" ID="page_content" class="big_text"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ID="validate_body" ControlToValidate="page_content" ErrorMessage="PLEASE ENTER SOME CONTENT FOR YOUR PAGE!"></asp:RequiredFieldValidator>
         </div>
-        <div class="bttn">
-            <asp:Button runat="server" text="Create" OnClick="Add_Page" />
+        <div>
+            <asp:Button runat="server" text="Create" OnClick="Add_Page" class="bttn" />
         </div>
     </div>
 </asp:Content>

@@ -15,8 +15,8 @@
         </div>
 
         <div id ="delete_update">     
-            <asp:Button OnClick="Update_Page" Text="Update" runat="server" />
-            <Asp:Button OnClientClick="if(!confirm('Are you sure you want to delete this page?')) return false;" OnClick="Delete_Page" Text="Delete" runat="server"/>
+            <asp:Button OnClick="Update_Page" Text="Update" runat="server" class="bttn" />
+            <Asp:Button OnClientClick="if(!confirm('Are you sure you want to delete this page?')) return false;" OnClick="Delete_Page" Text="Delete" runat="server" class="bttn"/>
         </div>
         <div class="viewnav">
             <a class="left" href="ManagePages.aspx">Cancel</a>
