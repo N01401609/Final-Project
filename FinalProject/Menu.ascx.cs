@@ -26,7 +26,6 @@ namespace FinalProject
                 string pageid = row["PAGE_ID"];
                 string title = row["PAGE_TITLE"];
                 menu_pages.InnerHtml += "<li><a href=\"Viewpage.aspx?page_id=" + pageid + "\">" + title + "</a></li>";
-                //menu_pages.InnerHtml += "<li>Hello</li>";
 
 
 
