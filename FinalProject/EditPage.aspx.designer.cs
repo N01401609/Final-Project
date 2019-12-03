@@ -15,30 +15,39 @@ namespace FinalProject
     {
 
         /// <summary>
-        /// delete_page control.
+        /// page_header control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl delete_page;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_header;
 
         /// <summary>
-        /// page_title control.
+        /// page_update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_title;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_update;
 
         /// <summary>
-        /// page_content control.
+        /// new_page_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_content;
+        protected global::System.Web.UI.WebControls.TextBox new_page_title;
+
+        /// <summary>
+        /// new_page_content control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox new_page_content;
     }
 }

@@ -41,7 +41,7 @@ namespace FinalProject
                 string pagebody = row["PAGE_BODY"];
 
                 result.InnerHtml += "<div class=\"col\"><a href=\"Viewpage.aspx?page_id=" + pageid + "\"><p>view<p/></a></div>";
-                result.InnerHtml += "<div class=\"col\"><a href='#'><p>edit<p/></a></div>";
+                result.InnerHtml += "<div class=\"col\"><a href=\"EditPage.aspx?page_id=" + pageid + "\"><p>edit<p/></a></div>";
 
                 result.InnerHtml += "</div>";
             }

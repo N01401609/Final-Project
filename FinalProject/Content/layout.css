@@ -1,0 +1,121 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Barlow|Bebas+Neue&display=swap');
+
+/*Navigation*/
+html {
+    font-family: 'Barlow', sans-serif;
+}
+header, footer {
+    background-color: #7F305A;
+    padding: 20px;
+}
+
+a {
+    color: brown;
+    text-decoration: none;
+    margin-right: 0.5em;
+}
+
+    a:hover {
+        color: #7F0A48;
+        font-weight: bold;
+    }
+
+.nav li {
+    display: inline-block;
+}
+.nav a {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    padding: 2em;
+    font-size: 25px;
+}
+    .nav a:hover {
+        color: #CC737F;
+    }
+
+.nav #header_nav {
+    position: absolute;
+    top: 3em;
+}
+#manage_pages{
+    position: absolute;
+    top:0;
+    right:3em;
+}
+
+/* Style for the table*/
+._table {
+    padding: 2em;
+}
+#titles {
+    background: #D991AB;
+    font-weight: bold;
+    color: #734040;
+    font-family: Arial;
+}
+.listitem {
+    background: #fefefe;
+    padding: 12px 5%;
+    width: 50%;
+    overflow: hidden;
+    margin-right: 20%;
+    margin-left: 20%;
+    border: 0.5px gray solid;
+}
+    .listitem:after {
+        clear: both;
+    }
+    .listitem:hover {
+        background: #F2E4E9;
+    }
+
+.listitem #titles {
+        background-color: goldenrod;
+        color: white;
+        font-weight: bold;
+
+}
+.colfirst, .col, .collast, h1{
+    text-align: center;
+}
+.colfirst {
+    float: left;
+    width: 37%;
+    margin-right: 1%;
+}
+.col, .collast {
+    float: left;
+    width: 20%;
+    margin-right: 1%;
+}
+
+.collast {
+    margin-right: 0%;
+}
+
+
+/* Body Styling*/
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #734040;
+    font-size: 40px;
+}
+#new_page {
+    text-align:center;
+    margin: 12px; 
+}
+.crud{
+    text-align:center;
+    right:0px; 
+}
+.big_text{
+    height:100px;
+    width:25%;
+}
+/*Buttons*/
+button {
+    background-color: #E4C1BE;
+}
+
+
+

@@ -2,16 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Body" runat="server">
     <h1>ADD NEW PAGE</h1>
     <div class="crud">
-        <div>
+        <div class="input">
             <label>Page Title:</label>
             <asp:TextBox runat="server" ID="page_title" ></asp:TextBox>
         </div>
-        <div>
+        <div class="input">
             <label>Page Content:</label>
-            <asp:TextBox runat="server" ID="page_content" ></asp:TextBox>
+            <asp:TextBox runat="server" ID="page_content" class="big_text"></asp:TextBox>
         </div>
         <div>
-            <asp:Button runat="server" text="Create" OnClick="Add_Page"/>
+            <asp:Button runat="server" text="Create" OnClick="Add_Page" />
         </div>
     </div>
 </asp:Content>

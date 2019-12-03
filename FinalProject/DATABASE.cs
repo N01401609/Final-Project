@@ -83,15 +83,17 @@ namespace FinalProject
             return ResultSet;
         }
 
-        public HTTP_PAGE FindPage(int id)
+        public Dictionary<String, String> FindPage(int id)
         {
+            //Utilize the connection string
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
-            HTTP_PAGE result_page = new HTTP_PAGE();
+            Dictionary<String, String> page = new Dictionary<String, String>();
 
+            
             try
             {
                 //Build a custom query with the id information provided
-                string query = "select * from pages where PAGE_ID = " + id;
+                string query = "select * from pages where page_id = " + id;
                 Debug.WriteLine("Connection Initialized...");
                 //open the db connection
                 Connect.Open();
@@ -100,51 +102,41 @@ namespace FinalProject
                 //grab the result set
                 MySqlDataReader resultset = cmd.ExecuteReader();
 
-                List<HTTP_PAGE> pages = new List<HTTP_PAGE>();
+                //Create a list of pages
+                List<Dictionary<String, String>> Pages = new List<Dictionary<String, String>>();
 
                 //read through the result set
                 while (resultset.Read())
                 {
-                    //information that will store a single student
-                    HTTP_PAGE currentpage = new HTTP_PAGE();
+                    //stores the information of one page
+                    Dictionary<String, String> Page = new Dictionary<String, String>();
 
                     //Look at each column in the result set row, add both the column name and the column value to our Student dictionary
                     for (int i = 0; i < resultset.FieldCount; i++)
                     {
-                        string key = resultset.GetName(i);
-                        string value = resultset.GetString(i);
-                        Debug.WriteLine("Attempting to transfer " + key + " data of " + value);
-                        //can't just generically put data into a dictionary anymore
-                        //must go through each column one by one to insert data into the right property
-                        switch (key)
-                        {
-                            case "PAGE_TITLE":
-                                currentpage.SetPageTitle(value);
-                                break;
-                            case "PAGE_BODY":
-                                currentpage.SetPageContent(value);
-                                break;
-                        }
+                        Debug.WriteLine("Attempting to transfer data of " + resultset.GetName(i));
+                        Debug.WriteLine("Attempting to transfer data of " + resultset.GetString(i));
+                        Page.Add(resultset.GetName(i), resultset.GetString(i));
 
                     }
-                    //Add the student to the list of students
-                    pages.Add(currentpage);
+                    //Add the page to the list
+                    Pages.Add(Page);
                 }
 
-                result_page = pages[0]; //get the first student
+                page = Pages[0]; //get the first page
 
             }
             catch (Exception ex)
             {
                 //If something (anything) goes wrong with the try{} block, this block will execute
-                Debug.WriteLine("Something went wrong in the find Student method!");
+                Debug.WriteLine("Something went wrong in the find pages method!");
                 Debug.WriteLine(ex.ToString());
             }
 
             Connect.Close();
             Debug.WriteLine("Database Connection Terminated.");
 
-            return result_page;
+            return page;
         }
 
         public void AddPage(HTTP_PAGE new_page)
@@ -165,6 +157,30 @@ namespace FinalProject
             catch (Exception ex)
             {
                 Debug.WriteLine("Something went wrong in the AddPage Method!");
+                Debug.WriteLine(ex.ToString());
+            }
+
+            Connect.Close();
+        }
+        public void UpdatePage(int pageid, HTTP_PAGE new_page)
+        {
+
+            string query = "update pages set PAGE_TITLE='{0}', PAGE_BODY='{1}' where PAGE_ID={2}";
+            query = String.Format(query, new_page.GetPageTitle(), new_page.GetPageContent(), pageid);
+
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+            MySqlCommand cmd = new MySqlCommand(query, Connect);
+            try
+            {
+                //Updating a page with the information in this query.
+                Connect.Open();
+                cmd.ExecuteNonQuery();
+                Debug.WriteLine("Executed query " + query);
+            }
+            catch (Exception ex)
+            {
+                //If that doesn't seem to work, check Debug>Windows>Output for the below message
+                Debug.WriteLine("Something went wrong in the UpdatePage Method!");
                 Debug.WriteLine(ex.ToString());
             }
 

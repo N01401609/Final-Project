@@ -13,10 +13,10 @@ namespace FinalProject
         {
             DATABASE db = new DATABASE();
             //showing the base record student information
-            ShowPage(db);
+            Show_Page(db);
 
         }
-        protected void ShowPage(DATABASE db)
+        /*protected void Show_Page(DATABASE db)
         {
 
             bool valid = true;
@@ -44,22 +44,36 @@ namespace FinalProject
             {
                 view_page.InnerHtml = "There was an error finding that page";
             }
-        }
-
-        protected void Delete_Page(object sender, EventArgs e)
+        }*/
+        protected void Show_Page(DATABASE db)
         {
+
             bool valid = true;
             string pageid = Request.QueryString["page_id"];
             if (String.IsNullOrEmpty(pageid)) valid = false;
 
-            DATABASE db = new DATABASE();
-
-            //deleting the page
             if (valid)
             {
-                db.DeletePage(Int32.Parse(pageid));
-                Response.Redirect("ManagePages.aspx");
+
+                Dictionary<String, String> teacher_record = db.FindPage(Int32.Parse(pageid));
+
+                if (teacher_record.Count > 0)
+                {
+                    page_title.InnerHtml = teacher_record["PAGE_TITLE"];
+                    page_content.InnerHtml = teacher_record["PAGE_BODY"];
+                }
+                else
+                {
+                    valid = false;
+                }
+            }
+
+            if (!valid)
+            {
+                view_page.InnerHtml = "There was an error displaying your page";
             }
         }
+
+       
     }
 }

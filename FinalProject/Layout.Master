@@ -1,36 +1,35 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.Master.cs" Inherits="FinalProject.Site1" %>
+<%@ Register Src="~/Menu.ascx" TagName="Menu" TagPrefix="asp"%>
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     
 <head runat="server">
     <title> Creative Pages</title>
-    <link rel="stylesheet" type="text/css" href="/Content/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/layout.css" />
 </head>
 
 <body>
-    <form id="form1" runat="server">
+    
     <header class="c-width">
-        <div id="header_nav">
-                <asp:Menu runat="server"></asp:Menu>
-
+        <div id="header_nav" class="nav">
+            <asp:Menu runat="server"></asp:Menu>
+            <a href="ManagePages.aspx" id="manage_pages">Manage Pages</a>
         </div>
-
     </header>
+
     <div class="c-width">
-       
+        <form id="form1" runat="server">
             <asp:ContentPlaceHolder ID="Body" runat="server">
             </asp:ContentPlaceHolder>
-
-             
-
+        </form>
     </div>
     <footer class="c-width">
 
 
     </footer>
-</form>   
+   
 </body>
 </html>
 
