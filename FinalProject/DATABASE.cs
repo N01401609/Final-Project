@@ -111,7 +111,7 @@ namespace FinalProject
                     //stores the information of one page
                     Dictionary<String, String> Page = new Dictionary<String, String>();
 
-                    //Look at each column in the result set row, add both the column name and the column value to our Student dictionary
+                    //Look at each column in the result set row, add both the column name and the column value to our Page dictionary
                     for (int i = 0; i < resultset.FieldCount; i++)
                     {
                         Debug.WriteLine("Attempting to transfer data of " + resultset.GetName(i));
