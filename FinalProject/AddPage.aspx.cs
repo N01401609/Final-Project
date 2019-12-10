@@ -19,14 +19,14 @@ namespace FinalProject
             DATABASE db = new DATABASE();
 
             //Create a new page object
-            HTTP_PAGE new_student = new HTTP_PAGE();
+            HTTP_PAGE new_page = new HTTP_PAGE();
 
             //Set the values based on user input
-            new_student.SetPageTitle(page_title.Text);
-            new_student.SetPageContent(page_content.Text);
+            new_page.SetPageTitle(page_title.Text);
+            new_page.SetPageContent(page_content.Text);
 
             //Add page to the database
-            db.AddPage(new_student);
+            db.AddPage(new_page);
 
 
             Response.Redirect("ManagePages.aspx");
